@@ -58,13 +58,11 @@ class Monitor extends CI_Controller {
         
         //EOS
         $url = "https://api.eosnewyork.io/v1/chain/get_producers";
-        $json = "{\"json\" : true, \"limit\" : 100 }";
+        $json = "{\"json\" : true, \"limit\" : 21 }";
         $ret = $this->cho->getCurl($url,$json);
         $this->_Cons['eosVoting'] = json_decode($ret);
         
-        $exUrl = explode("blockMonitor",site_url("/Monitor")); 
         $exDir = explode("/application",APPPATH);
-        
         
         //Whitepaper
         $_whitepaper = $this->cho->dirSearch( $exDir[0] . "/_whitepaper/");
@@ -91,13 +89,10 @@ class Monitor extends CI_Controller {
         }
         $this->_Cons['report'] = $report;
         
-        //Blog 
+        //Blog ICOLAB
         
         $x = simplexml_load_file("https://rss.blog.naver.com/mason_icolab.xml",'SimpleXMLElement',LIBXML_NOCDATA);
-        
-        
         $this->_Cons['icolab'] = $x->channel;
-        
     }
     
     public function index(){
@@ -110,6 +105,7 @@ class Monitor extends CI_Controller {
                 $menu = array(
                     "Home"=>site_url("/Monitor"),
                     "News"=>site_url("/Monitor/v/news"),
+                    "Blog"=>site_url("/Monitor/v/blog"),
                     "Tickers"=>site_url("/Monitor/v/tickers"),
                 );
                 break;
@@ -188,6 +184,10 @@ class Monitor extends CI_Controller {
         switch($this->_Cons['vFIle']) {
             case "news":
                 $this->_Cons['newsCat'] = $this->pdo->query("select * from S_news where contentFlag=0 group by news,category order by contentDate desc")->result();
+                break;
+            case "blog":
+                $x = simplexml_load_file("https://rss.blog.naver.com/mason_icolab.xml",'SimpleXMLElement',LIBXML_NOCDATA);
+                $this->_Cons['icolab'] = $x->channel;
                 break;
         }
         $this->cho->widget($_templates,$thema,$this->_Cons['vFIle']);

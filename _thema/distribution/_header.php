@@ -72,6 +72,13 @@
                                 }else {
                                     $active = "";
                                 } 
+                            }else if ($vFIle == "blog") {
+                                if ($k == "Blog") {
+                                    $active = "active";
+                                }else {
+                                    $active = "";
+                                } 
+                            
                             }else if ($vFIle == "tickers") {
                                 if ($k == "Tickers") {
                                     $active = "active";
