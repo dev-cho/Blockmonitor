@@ -112,6 +112,7 @@
 <script>
 function newsletterSend() {
     var mailId = $('#userMail').val(); //Mail ID
-    window.open('mailto:' + mailId);
+    //window.open('mailto:' + mailId);
+    location.href='mailto:' + mailId;
 }
 </script>
