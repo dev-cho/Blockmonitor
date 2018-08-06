@@ -11,8 +11,8 @@
         <div class="form-holder">
           <form action="#">
             <div class="form-group">
-              <input type="email" name="email" id="email" placeholder="Email address">
-              <button type="submit" class="submit">Subscribe</button>
+              <input type="email" name="email" id="userMail" placeholder="Email address">
+              <button type="button" onclick="newsletterSend();" class="submit">Subscribe</button>
             </div>
           </form>
         </div>
@@ -108,3 +108,10 @@
 
 </body>
 </html>
+
+<script>
+function newsletterSend() {
+    var mailId = $('#userMail').val(); //Mail ID
+    window.open('mailto:' + mailId);
+}
+</script>

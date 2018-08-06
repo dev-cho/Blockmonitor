@@ -140,7 +140,7 @@
   ?>
     <!-- Post-->
     <div class="row d-flex align-items-stretch">
-      <div class="text col-lg-7">
+      <div class="text col-lg-7 col-xs-12 ">
         <div class="text-inner d-flex align-items-center">
           <div class="content" style="font-size:13px;">
             <header class="post-header">
@@ -161,15 +161,15 @@
           </div>
         </div>
       </div>
-     <div class="image col-lg-5"><img src="<?php echo $v->img; ?>" alt="..." style="width:80%;height:80%;"></div>
+     <div class="image col-lg-5 col-xs-12 d-none d-sm-block"><img src="<?php echo $v->img; ?>" alt="..." ></div>
     </div>
   <?php
       }else if($num % 2 == 0){
   ?>
     <!-- Post-->
     <div class="row d-flex align-items-stretch">
-    <div class="image col-lg-5"><img src="<?php echo $v->img; ?>" alt="..." style="width:80%;height:80%;"></div>
-      <div class="text col-lg-7">
+    <div class="image col-lg-5 col-xs-12 d-none d-sm-block"><img src="<?php echo $v->img; ?>" alt="..." ></div>
+      <div class="text col-lg-7 col-xs-12">
         <div class="text-inner d-flex align-items-center">
           <div class="content" style="font-size:13px;">
             <header class="post-header">
@@ -269,7 +269,7 @@
           </div>
         </div>
       </div>
-     <div class="image col-lg-5"><img src="<?php echo $icolab->image->url; ?>" alt="..." style="width:80%;height:80%;"></div>
+     <div class="image col-lg-5 d-none d-sm-block"><img src="<?php echo $icolab->image->url; ?>" alt="..." style="width:80%;height:80%;"></div>
     </div>
   <?php 
       }else if($num % 2 == 0) {
@@ -277,7 +277,7 @@
   ?>
     <!-- Post-->
     <div class="row d-flex align-items-stretch">
-    <div class="image col-lg-5"><img src="<?php echo $icolab->image->url; ?>" alt="..." style="width:80%;height:80%;"></div>
+    <div class="image col-lg-5 d-none d-sm-block"><img src="<?php echo $icolab->image->url; ?>" alt="..." style="width:80%;height:80%;"></div>
       <div class="text col-lg-7">
         <div class="text-inner d-flex align-items-center">
           <div class="content" style="font-size:13px;">
@@ -309,7 +309,7 @@
 </section>
 
 <!-- Divider Section-->
-<section style="background: url(<?php echo $url . "/img/custom/main-2.jpg";?>); background-size: cover; background-position: center bottom" class="divider">
+<section style="background: url(<?php echo $url . "/img/custom/main-2.jpg";?>); background-size: cover; background-position: center bottom" class="divider d-none d-sm-block">
   <div class="container">
     <div class="row">
       <div class="col-md-7">
@@ -323,7 +323,7 @@
 
 ?>
 <!-- Latest Posts -->
-<section class="latest-posts"> 
+<section class="latest-posts d-none d-sm-block"> 
   <div class="container">
     <header> 
       <h2>코인 백서/보고서</h2>
@@ -333,7 +333,7 @@
       <?php 
         foreach($whitepaper as $k=>$v) {
       ?>
-      <div class="post col-md-4">
+      <div class="post col-md-4 col-xs-12">
         <div class="post-thumbnail">
           <embed src="<?php echo $v[0]; ?>" alt="pdf" style="width:100%;height:400px;" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">  
         </div>
@@ -356,14 +356,14 @@
     </div>
   </div>
 </section>
-<section class="featured-posts no-padding-top"> 
+<section class="featured-posts no-padding-top d-none d-sm-block"> 
   <div class="container">
     
     <div class="row">
       <?php 
         foreach($report as $k=>$v) {
       ?>
-      <div class="post col-md-4">
+      <div class="post col-md-4 col-xs-12">
         <div class="post-thumbnail">
           <embed src="<?php echo $v[0]; ?>" alt="pdf" style="width:100%;height:400px;" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">  
         </div>
