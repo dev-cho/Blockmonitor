@@ -1,0 +1,1 @@
+<?php require_once $dir . "/_footer.php"; ?>
