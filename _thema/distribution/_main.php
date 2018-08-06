@@ -117,14 +117,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2>Blockchain News </h2><a href="#"  class="hero-link">View More</a>
+        <h2>Blockchain News </h2><a href="#News"  class="hero-link">More</a>
       </div>
     </div>
   </div>
 </section>
 <br><br>
 
-<section class="featured-posts no-padding-top">
+<section class="featured-posts no-padding-top" id="News">
   <div class="container">
   <?php
   if (!empty($c_menu)){
@@ -210,7 +210,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2>Blog News </h2><a href="#"  class="hero-link">View More</a>
+        <h2>Blog News </h2><a href="#blogNews" class="hero-link">More</a>
       </div>
     </div>
   </div>
@@ -218,7 +218,7 @@
 
 <section class="latest-posts"></section>
 
-<section class="featured-posts no-padding-top">
+<section class="featured-posts no-padding-top" id="blogNews">
   <div class="container">
   <?php
   //print_r($icolab);
@@ -313,7 +313,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2>Blockchain Whitepaper </h2><a href="#"  class="hero-link">View More</a>
+        <h2>Blockchain Whitepaper </h2><a href="#"  class="hero-link"></a>
       </div>
     </div>
   </div>

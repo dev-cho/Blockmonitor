@@ -42,7 +42,7 @@
                         <form action="#">
                             <div class="form-group">
                                 <input type="search" name="search" id="search" placeholder="What are you looking for?">
-                                <button type="submit" class="submit"><i class="icon-search-1"></i></button>
+                                <!--<button type="submit" class="submit"><i class="icon-search-1"></i></button>-->
                             </div>
                         </form>
                     </div>
@@ -119,7 +119,7 @@
                 <br>
                 EOS / TRON / TUBE / Blockchain Media 
                 <br>
-                <a href="#" class="hero-link">More</a>
+                <a href=".intro" class=" link-scroll">More</a>
             </div>
         </div>
         <a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>

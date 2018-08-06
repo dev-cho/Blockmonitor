@@ -163,7 +163,24 @@ class Monitor extends CI_Controller {
     public function v(){
         //View 파일
         $this->_Cons['vFIle'] = $this->uri->segment(3, "main");
-       
+        
+        if( !empty($this->input->get("search",TRUE) )) {
+            
+            foreach( $this->_Cons['h_menu'] as $k=>$v ) {
+                if ( strtolower($k) == strtolower( $this->input->get("search",TRUE) )  ) {
+                    $this->_Cons['vFIle'] = strtolower( $this->input->get("search",TRUE) );
+                    break;
+                }else {
+                    $this->_Cons['vFIle'] = "0" ;
+                }
+            }
+            
+            if ($this->_Cons['vFIle'] == "0"){
+                echo "<script>location.replace('".site_url()."')</script>";
+            }
+            
+        }
+
         $_templates = array("c/header","c/body","c/footer");
         $exDir = explode("/application",APPPATH);
         $t ="A";
